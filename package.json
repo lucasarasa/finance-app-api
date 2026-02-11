@@ -17,6 +17,7 @@
         "git-commit-msg-linter": "^5.0.4",
         "globals": "^17.3.0",
         "husky": "^8.0.3",
-        "lint-staged": "^13.2.3"
+        "lint-staged": "^13.2.3",
+        "prettier": "^3.8.1"
     }
 }
