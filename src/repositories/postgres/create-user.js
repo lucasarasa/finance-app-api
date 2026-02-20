@@ -18,6 +18,8 @@ export class PostgresCreateUserRepository {
             [createUserParams.id],
         )
 
+        // console.log('Created user:', createdUser)
+
         return createdUser[0]
     }
 }
