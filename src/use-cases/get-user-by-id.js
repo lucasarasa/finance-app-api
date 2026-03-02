@@ -4,9 +4,7 @@ export class GetUserByIdUseCase {
     }
 
     async execute(userId) {
-        const getUserByIdRepository = this.getUserByIdRepository
-
-        const user = await getUserByIdRepository.execute(userId)
+        const user = await this.getUserByIdRepository.execute(userId)
 
         return user
     }
