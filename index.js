@@ -48,12 +48,11 @@ app.post('/api/users', async (req, res) => {
 })
 
 app.patch('/api/users/:id', async (req, res) => {
-    const postgresGetUserByEmailRepository =
-        new PostgresGetUserByEmailRepository()
-    const postgresUpdateUserRepository = new PostgresUpdateUserRepository()
+    const getUserByEmailRepository = new PostgresGetUserByEmailRepository()
+    const updateUserRepository = new PostgresUpdateUserRepository()
     const updateUserUseCase = new UpdateUserUseCase(
-        postgresGetUserByEmailRepository,
-        postgresUpdateUserRepository,
+        getUserByEmailRepository,
+        updateUserRepository,
     )
     const updateUserController = new UpdateUserController(updateUserUseCase)
     const { statusCode, body } = await updateUserController.execute(req)
